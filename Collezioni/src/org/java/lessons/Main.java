@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -46,6 +47,9 @@ public class Main {
 		elencoAnimali.add(g);
 		elencoAnimali.add(new Cane("Flash"));
 		elencoAnimali.add(g);
+		
+		Collections.sort(elencoAnimali);  //ordinamento alfabetico per nome (predefinito)
+		Collections.sort(elencoAnimali, new CompareRazza() );  //ordinamento alfabetico per razza
 	/*	
 		for(int i=0;i<elencoAnimali.size();i++) {
 			System.out.print(elencoAnimali.get(i).getNome()+": ");
@@ -139,6 +143,7 @@ public class Main {
 			System.out.print(a.getNome()+": ");
 			a.faiVerso();
 		}
+		
 		
 		
 	}
